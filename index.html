@@ -4,96 +4,238 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>김중혁 | Backend Engineer</title>
-  <meta
-    name="description"
-    content="Java, Spring Boot 기반 백엔드 개발자 김중혁 포트폴리오"
-  />
+  <meta name="description" content="Java/Spring 기반 백엔드 엔지니어 김중혁 이력서" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
   <header class="hero">
     <div class="container">
-      <p class="eyebrow">Backend Engineer Portfolio</p>
+      <p class="eyebrow">Backend Engineer (Java / Spring)</p>
       <h1>김중혁</h1>
       <p class="subtitle">
-        Java · Spring 기반 백엔드 개발자로 API 설계, 성능 개선, 운영 안정화를 중심으로
-        실제 서비스 환경의 문제를 해결해 왔습니다.
+        Java · Spring 기반 백엔드 개발자로 대규모 서비스의 API 설계, 성능 개선, 운영 안정화를 경험했습니다.
+        실제 트래픽 운영 환경에서 데이터 정합성과 시스템 안정성을 중심으로 백엔드 아키텍처를 설계해 왔습니다.
+        최근에는 Claude Code 기반 AI 협업 환경 구축을 통해 개발 생산성 향상에 집중하고 있습니다.
       </p>
+      <blockquote class="headline-quote">
+        문제가 발생하지 않는 시스템보다, 문제가 발생해도 안정적으로 복구 가능한 구조를 설계합니다.
+      </blockquote>
 
-      <div class="links">
-        <a href="mailto:moon960427@gmail.com">Email</a>
-        <a href="https://github.com/JoongHyuk-Kim" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://velog.io/@moon960427" target="_blank" rel="noreferrer">Blog</a>
+      <div class="meta-grid">
+        <p><strong>경력</strong> 4년차 (2022.05 ~ 현재)</p>
+        <p><strong>Email</strong> <a href="mailto:moon960427@gmail.com">moon960427@gmail.com</a></p>
+        <p><strong>Phone</strong> <a href="tel:01090016275">010-9001-6275</a></p>
+        <p><strong>GitHub</strong> <a href="https://github.com/JoongHyuk-Kim" target="_blank" rel="noreferrer">github.com/JoongHyuk-Kim</a></p>
+        <p><strong>Blog</strong> <a href="https://velog.io/@moon960427" target="_blank" rel="noreferrer">velog.io/@moon960427</a></p>
       </div>
     </div>
   </header>
 
   <main class="container">
     <section>
-      <h2>소개</h2>
-      <p>
-        카카오 자회사에서 대용량 데이터 처리, 외부 API 연동, 트래픽 대응,
-        인증/인가 설계 등 백엔드 핵심 영역을 경험했습니다.
-        문제를 구조적으로 분석하고 운영 환경에서 안정적으로 동작하는 시스템을 만드는 데 집중합니다.
-      </p>
+      <h2>핵심 요약</h2>
+      <ul class="achievement-list">
+        <li>Redis 캐싱과 쿼리 최적화로 API 응답 시간 P95 500ms -> 50ms 개선</li>
+        <li>Kubernetes 환경 배치 중복 실행 이슈를 구조적으로 제거해 0건 유지</li>
+        <li>Factory 기반 아키텍처로 컨트롤러 112개를 8개로 통합해 확장성과 유지보수성 개선</li>
+      </ul>
     </section>
 
     <section>
       <h2>기술 스택</h2>
       <div class="card-grid">
-        <div class="card">
+        <article class="card">
           <h3>Language</h3>
-          <p>Java, Kotlin</p>
-        </div>
-        <div class="card">
+          <p>Java 17+ (주력), Kotlin</p>
+        </article>
+        <article class="card">
           <h3>Framework</h3>
           <p>Spring Boot, Spring MVC, Spring Batch, Spring Security</p>
-        </div>
-        <div class="card">
-          <h3>Database</h3>
-          <p>JPA, QueryDSL, MySQL, Redis</p>
-        </div>
-        <div class="card">
-          <h3>Infra</h3>
-          <p>Docker, Kubernetes, Kakao i Cloud, CI/CD</p>
-        </div>
+        </article>
+        <article class="card">
+          <h3>ORM / DB</h3>
+          <p>JPA(Hibernate), QueryDSL, MySQL, Redis</p>
+        </article>
+        <article class="card">
+          <h3>Infra / Collaboration</h3>
+          <p>Docker, Kubernetes, Kakao i Cloud (DKOS), Git, GitHub, GitLab, Jira, Slack</p>
+        </article>
       </div>
     </section>
 
     <section>
-      <h2>주요 성과</h2>
-      <ul class="achievement-list">
-        <li>Redis 캐싱 도입으로 API 응답속도 500ms → 50ms 개선</li>
-        <li>Kubernetes 환경에서 Batch 중복 실행 문제 해결</li>
-        <li>Factory 기반 아키텍처 설계로 컨트롤러 112개 → 8개 통합</li>
-        <li>Claude Code 기반 AI 협업 체계 구축으로 개발 생산성 약 30% 향상</li>
-      </ul>
+      <h2>경력</h2>
+      <article class="project">
+        <h3>dktechin (카카오 자회사)</h3>
+        <p class="period">2022.05 ~ 재직 중</p>
+        <ul>
+          <li>카카오 예산협의 시스템 인증/인가 체계 설계 및 백엔드 개발</li>
+          <li>카카오 비즈니스 세미나 예약 시스템 성능 개선 및 운영 안정화</li>
+          <li>카카오 모빌리티 결산 지원 시스템 대용량 데이터 처리</li>
+          <li>사내 공통 모듈(통합 게시판) 설계 및 라이브러리 배포</li>
+        </ul>
+      </article>
     </section>
 
     <section>
-      <h2>프로젝트</h2>
+      <h2>주요 프로젝트</h2>
 
       <article class="project">
         <h3>카카오 예산협의 시스템</h3>
-        <p class="period">2026.01 ~ 현재</p>
-        <p>카카오 내부 예산 요청 · 승인 · 집행 프로세스 관리 시스템</p>
+        <p class="period">2026.01 ~ 현재 | 역할: 인증/인가 설계 및 워크플로우 설계 | 백엔드 3인</p>
+        <p class="stack">Java, Spring Boot, Spring Security, JPA, QueryDSL, MySQL, Redis, Docker, Kubernetes</p>
         <ul>
-          <li>Claude Code 기반 AI 협업 개발 환경 구축</li>
-          <li>Kakao SSO(OAuth2) + JWT 기반 인증/인가 구조 설계</li>
-          <li>State Machine 기반 워크플로우 설계</li>
+          <li><strong>프로젝트 개요:</strong> 카카오 내부 예산 요청/승인/집행 프로세스를 디지털화한 시스템</li>
+          <li><strong>핵심 성과 1:</strong> 인증/인가 모듈 단독 설계 및 구현으로 부서/직급 기반 권한 정책을 일관되게 적용</li>
+          <li><strong>핵심 성과 2:</strong> JWT 토큰 운영 정책 최적화로 보안성과 사용자 경험을 동시에 확보</li>
+          <li><strong>핵심 성과 3:</strong> AI 협업 컨텍스트 표준화로 코드 리뷰 수정 건수 체감 40% 감소, 개발 속도 30% 향상</li>
         </ul>
       </article>
 
       <article class="project">
-        <h3>카카오 비즈니스 세미나 예약 시스템</h3>
-        <p class="period">2024.12 ~ 2025.12</p>
-        <p>카카오 비즈니스 세미나 예약 · 결제 · 컨설팅 연계 시스템</p>
+        <h3>카카오 비즈니스 세미나 예약 시스템 운영 및 4차/4.5차 개편</h3>
+        <p class="period">2024.12 ~ 2025.12 | 역할: 성능 개선 및 배치/연동 안정화 | 백엔드 2인</p>
+        <p class="stack">Java, Spring Boot, JPA, QueryDSL, Spring Batch, MySQL, Redis, Docker, Kubernetes</p>
         <ul>
-          <li>Redis 캐싱 + 인덱스 최적화로 성능 개선</li>
-          <li>외부 API 호출 분리 및 보상 트랜잭션 적용</li>
-          <li>CronJob + concurrencyPolicy: Forbid로 Batch 안정화</li>
+          <li><strong>프로젝트 개요:</strong> 세미나 예약/결제/컨설팅 연계 시스템 운영 및 고도화</li>
+          <li><strong>핵심 성과 1:</strong> 메인 API 응답 시간 P95 500ms -> 50ms 개선</li>
+          <li><strong>핵심 성과 2:</strong> 외부 API 장애 상황에서도 내부 데이터 정합성 100% 유지</li>
+          <li><strong>핵심 성과 3:</strong> Kubernetes CronJob(<code>concurrencyPolicy: Forbid</code>) 적용으로 배치 중복 실행 0건 달성</li>
         </ul>
       </article>
+
+      <article class="project">
+        <h3>카카오 모빌리티 결산 지원 시스템</h3>
+        <p class="period">2022.06 ~ 2023.03 (10개월) | 역할: 대용량 처리 및 아키텍처 개선 | 백엔드 협업</p>
+        <p class="stack">Java, Spring Boot, JPA, QueryDSL, MySQL, Redis</p>
+        <ul>
+          <li><strong>프로젝트 개요:</strong> 카카오 모빌리티 전담 버티컬(렌터카, 퀵보드 등) 결산 데이터 집계/처리 시스템</li>
+          <li><strong>핵심 성과 1:</strong> 70만 건 결산 데이터 안정 처리 기반 확보</li>
+          <li><strong>핵심 성과 2:</strong> 컨트롤러 112개 -> 8개 통합으로 유지보수성과 확장성 개선</li>
+          <li><strong>핵심 성과 3:</strong> 신규 버티컬 온보딩 절차 단순화로 기능 확장 리드타임 단축</li>
+        </ul>
+      </article>
+    </section>
+
+    <section>
+      <h2>추가 경험</h2>
+      <article class="project">
+        <h3>디자인 정보 매개 서비스</h3>
+        <p class="period">2023.05 ~ 2024.10</p>
+        <ul>
+          <li>JPA/Hibernate 기반 REST API 개발 및 Spring Batch 대용량 데이터 처리</li>
+          <li>전자계약, 카카오 알림톡 등 외부 API 연동</li>
+          <li>쿠폰 발급 동시성 이슈를 낙관적 락(Optimistic Lock)으로 해결</li>
+        </ul>
+      </article>
+      <article class="project">
+        <h3>통합 게시판 공통 모듈</h3>
+        <p class="period">2024.08 ~ 2024.09</p>
+        <ul>
+          <li>Kotlin 기반 통합 게시판 모듈 설계 및 Nexus Repository 사내 라이브러리 배포</li>
+          <li>다수 프로젝트에서 재사용 가능한 구조를 설계해 코드 표준화에 기여</li>
+        </ul>
+      </article>
+      <article class="project">
+        <h3>한세대학교 컴퓨터공학과 학회장</h3>
+        <p class="period">2019.01 ~ 2019.12</p>
+        <ul>
+          <li>2019년도 컴퓨터공학과 학회장을 역임하며 학생대표 역할 수행</li>
+          <li>학교와 학생 사이의 커뮤니케이션을 조율하며 소통 역량 강화</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="education-section">
+      <h2>교육 및 자격</h2>
+      <div class="education-group">
+        <h3 class="education-group-title">학력</h3>
+        <div class="card-grid education-grid">
+          <article class="card education-card">
+            <h3>한세대학교 컴퓨터공학과 졸업</h3>
+            <p class="period">2015.03 ~ 2021.08</p>
+            <ul class="education-list">
+              <li><strong>구분</strong> 학사</li>
+              <li><strong>전공</strong> 컴퓨터공학과</li>
+              <li><strong>평균학점</strong> 3.57</li>
+              <li><strong>전공학점/총학점</strong> 100 / 130</li>
+              <li><strong>전공평균학점</strong> 3.75</li>
+            </ul>
+          </article>
+
+          <article class="card education-card">
+            <h3>영덕고등학교 졸업</h3>
+            <p class="period">2012.03 ~ 2015.02</p>
+            <ul class="education-list">
+              <li><strong>구분</strong> 고등학교</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <div class="education-group">
+        <h3 class="education-group-title">자격증</h3>
+        <div class="card-grid education-grid">
+          <article class="card education-card">
+            <h3>정보처리기사</h3>
+            <ul class="education-list">
+              <li><strong>발급기관</strong> 한국산업인력공단</li>
+              <li><strong>취득일</strong> 2021.06.02</li>
+              <li><strong>자격번호</strong> 21201101662T</li>
+              <li>
+                <strong>증빙</strong>
+                <a href="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/87a290bb-5f35-4349-af22-f899db684bca/정보처리기사_김중혁.pdf" target="_blank" rel="noreferrer">정보처리기사_김중혁.pdf</a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="card education-card">
+            <h3>SQL 개발자(SQLD)</h3>
+            <ul class="education-list">
+              <li><strong>발급기관</strong> 재단법인 한국데이터산업진흥원</li>
+              <li><strong>취득일</strong> 2021.12.17</li>
+              <li><strong>자격번호</strong> SQL2D-043003271</li>
+              <li>
+                <strong>증빙</strong>
+                <a href="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ca7f0af4-8b86-4fe9-a2f0-ee4f72ca7905/SQLD_김중혁.pdf" target="_blank" rel="noreferrer">SQLD_김중혁.pdf</a>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <div class="education-group">
+        <h3 class="education-group-title">교육 이수</h3>
+        <div class="card-grid education-grid">
+          <article class="card education-card">
+            <h3>프로젝트 기반 Spring Cloud 개발자 양성과정 수료</h3>
+            <p class="period">2021.07.28 ~ 2022.01.05</p>
+            <ul class="education-list">
+              <li><strong>교육기관</strong> KOSTA(한국소프트웨어기술진흥협회)</li>
+              <li><strong>교육소개</strong> 실제 프로젝트 환경의 Cloud 맥락을 반영해 Spring Cloud 실무 역량을 강화하는 과정 수료</li>
+              <li><strong>주요 내용</strong> Java, Spring Framework, Database, Servlet, JSP, HTML, CSS, JavaScript</li>
+              <li>
+                <strong>증빙</strong>
+                <a href="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7995a956-b88b-4b2e-854c-b838881dfe3c/KOSTA_224기_수료_김중혁.pdf" target="_blank" rel="noreferrer">KOSTA 224기 수료_김중혁.pdf</a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="card education-card">
+            <h3>비트단기교육과정 41기 수료</h3>
+            <p class="period">2019.06.24 ~ 2019.08.12</p>
+            <ul class="education-list">
+              <li><strong>교육기관</strong> 비트교육센터</li>
+              <li><strong>교육소개</strong> 방학기간 단기 집중 실습 과정 수료</li>
+              <li><strong>주요 내용</strong> C, C++, Data Structure</li>
+              <li>
+                <strong>증빙</strong>
+                <a href="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/535893f6-249a-4422-aabc-702698b16a58/한세비트_단기과정_41차_김중혁.pdf" target="_blank" rel="noreferrer">비트단기과정 수료증</a>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
     </section>
   </main>
 
