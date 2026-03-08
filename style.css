@@ -70,6 +70,20 @@ h1 {
 .meta-grid p {
   margin: 0;
   color: #334155;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  flex-wrap: wrap;
+  line-height: 1.5;
+}
+
+.meta-grid strong {
+  color: #0f172a;
+  min-width: 56px;
+}
+
+.meta-grid a {
+  word-break: break-all;
 }
 
 main {
@@ -103,10 +117,17 @@ p {
 
 .education-grid {
   align-items: stretch;
+  grid-auto-rows: 1fr;
+}
+
+.education-group {
+  margin-top: 0;
 }
 
 .education-group + .education-group {
-  margin-top: 24px;
+  margin-top: 32px;
+  padding-top: 8px;
+  border-top: 1px solid #e2e8f0;
 }
 
 .education-group-title {
@@ -119,6 +140,10 @@ p {
 .education-card h3 {
   font-size: 19px;
   line-height: 1.4;
+}
+
+.education-card {
+  height: 100%;
 }
 
 .education-list {
@@ -173,12 +198,13 @@ p {
 }
 
 .achievement-list,
-ul {
+.project ul {
   padding-left: 20px;
   margin: 0;
 }
 
-li + li {
+.achievement-list li + li,
+.project li + li {
   margin-top: 8px;
 }
 
