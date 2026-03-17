@@ -35,10 +35,10 @@
     <section>
       <h2>핵심 요약</h2>
       <ul class="achievement-list">
-        <li>대량 조회 구간 인덱스 최적화로 메인 API 응답 시간 P95 500ms -> 50ms 개선</li>
+        <li>AI 협업 컨텍스트(테스트 컨벤션) 표준화로 테스트 문화를 정착시켜 라인 커버리지 80% 이상 달성 및 유지</li>
+        <li>대량 조회 구간 인덱스 최적화로 메인 API 응답 시간 P95 500ms -> 50ms 개선, k6 부하 테스트로 성능 개선 효과 검증</li>
         <li>Kubernetes 환경 배치 중복 실행 이슈를 구조적으로 제거해 0건 유지</li>
         <li>Factory 기반 아키텍처로 컨트롤러 112개를 8개로 통합해 확장성과 유지보수성 개선</li>
-        <li>AI 협업 컨텍스트(테스트 컨벤션) 표준화로 테스트 문화를 정착시켜 라인 커버리지 80% 이상 달성 및 유지</li>
       </ul>
     </section>
 
@@ -62,12 +62,12 @@
           <p>Gradle, Maven</p>
         </article>
         <article class="card">
-          <h3>Monitoring / Observability</h3>
-          <p>Grafana, Prometheus</p>
-        </article>
-        <article class="card">
           <h3>Infra / Collaboration</h3>
           <p>Docker, Kubernetes, Vault, Kakao i Cloud (DKOS), Git, GitHub, GitLab, Jira, Slack</p>
+        </article>
+        <article class="card">
+          <h3>Monitoring / Observability</h3>
+          <p>Grafana, Prometheus</p>
         </article>
       </div>
     </section>
@@ -82,6 +82,8 @@
           <li>카카오 비즈니스 세미나 예약 시스템 성능 개선 및 운영 안정화</li>
           <li>카카오 모빌리티 결산 지원 시스템 대용량 데이터 처리</li>
           <li>사내 공통 모듈(통합 게시판) 설계 및 라이브러리 배포</li>
+          <li>Kubernetes 기반 무중단 배포(Blue/Green, Rolling Update) 체계 구축으로 배포 안정성 및 서비스 연속성 강화</li>
+          <li>Kubernetes 기반 인프라에서 고가용성과 확장성을 고려한 서비스 아키텍처를 설계·구축·운영</li>
         </ul>
       </article>
     </section>
@@ -91,7 +93,7 @@
 
       <article class="project">
         <h3>카카오 예산협의 시스템</h3>
-        <p class="period">2026.01 ~ 현재 | 역할: 인증/인가 설계 및 워크플로우 설계 | 백엔드 3인</p>
+        <p class="period">2026.01 ~ 현재 | 역할: 인증/인가 설계 및 워크플로우 설계</p>
         <p class="stack">Java, Spring Boot, Spring Security, JPA, QueryDSL, MySQL, Redis, Docker, Kubernetes</p>
         <ul>
           <li><strong>프로젝트 개요:</strong> 카카오 내부 예산 요청/승인/집행 프로세스를 디지털화한 시스템</li>
@@ -103,12 +105,12 @@
 
       <article class="project">
         <h3>카카오 비즈니스 세미나 예약 시스템 운영 및 4차/4.5차 개편</h3>
-        <p class="period">2024.12 ~ 2025.12 | 역할: 성능 개선 및 배치/연동 안정화 | 백엔드 2인</p>
+        <p class="period">2024.12 ~ 2025.12 | 역할: 성능 개선 및 배치/연동 안정화</p>
         <p class="stack">서비스 링크: <a href="https://bizseminar.kakao.com/" target="_blank" rel="noreferrer">bizseminar.kakao.com</a></p>
         <p class="stack">Java, Spring Boot, JPA, QueryDSL, Spring Batch, MySQL, Redis, Docker, Kubernetes</p>
         <ul>
           <li><strong>프로젝트 개요:</strong> 세미나 예약/결제/컨설팅 연계 시스템 운영 및 고도화</li>
-          <li><strong>핵심 성과 1:</strong> 대량 조회 구간 인덱스 최적화로 메인 API 응답 시간 P95 500ms -> 50ms 개선</li>
+          <li><strong>핵심 성과 1:</strong> k6 기반 부하 테스트와 대량 조회 구간 인덱스 최적화로 메인 API 응답 시간 P95 500ms -> 50ms 개선</li>
           <li><strong>핵심 성과 2:</strong> 외부 API 장애 상황에서도 내부 데이터 정합성 100% 유지</li>
           <li><strong>핵심 성과 3:</strong> Kubernetes CronJob(<code>concurrencyPolicy: Forbid</code>) 적용으로 배치 중복 실행 0건 달성</li>
           <li><strong>핵심 성과 4:</strong> 외부 연동 오류 대응 로직(재시도/예외 처리)을 정비해 카카오뱅크 소상공인 컨설팅 연계의 실패 케이스를 줄이고 운영 안정성 강화</li>
@@ -117,12 +119,25 @@
       </article>
 
       <article class="project">
+        <h3>디자인 정보 매개 서비스</h3>
+        <p class="period">2023.05 ~ 2024.10 | 역할: 예약/계약/결제/정산 백엔드 개발 및 외부 연동</p>
+        <p class="stack">Java, Spring Boot, JPA, QueryDSL, Spring Batch, MySQL, Redis, Docker, Kubernetes</p>
+        <ul>
+          <li><strong>프로젝트 개요:</strong> 디자인 정보 기반 예약/계약/결제/정산 프로세스를 지원하는 서비스 백엔드 개발</li>
+          <li><strong>핵심 성과 1:</strong> Spring Batch 기반 대용량 데이터 처리 파이프라인을 설계·운영해 배치 처리 안정성과 운영 효율을 강화</li>
+          <li><strong>핵심 성과 2:</strong> 전자계약 및 카카오 알림톡 연동으로 예약/계약/결제 상태 안내 자동화 구현</li>
+          <li><strong>핵심 성과 3:</strong> 결제 및 정산 프로세스 연계 기능 개발로 거래 데이터 처리 안정성 강화</li>
+          <li><strong>핵심 성과 4:</strong> 쿠폰 발급 동시성 이슈를 낙관적 락(Optimistic Lock)으로 해결</li>
+        </ul>
+      </article>
+
+      <article class="project">
         <h3>카카오 모빌리티 결산 지원 시스템</h3>
-        <p class="period">2022.06 ~ 2023.03 (10개월) | 역할: 대용량 처리 및 아키텍처 개선 | 백엔드 협업</p>
-        <p class="stack">Java, Spring Boot, JPA, QueryDSL, MySQL, Redis</p>
+        <p class="period">2022.06 ~ 2023.03 (10개월) | 역할: 대용량 처리 및 아키텍처 개선</p>
+        <p class="stack">Java, Spring Boot, JPA, QueryDSL, Spring Batch, MySQL, Redis, Docker, Kubernetes</p>
         <ul>
           <li><strong>프로젝트 개요:</strong> 카카오 모빌리티 전담 버티컬(렌터카, 퀵보드 등) 결산 데이터 집계/처리 시스템</li>
-          <li><strong>핵심 성과 1:</strong> 70만 건 결산 데이터 안정 처리 기반 확보</li>
+          <li><strong>핵심 성과 1:</strong> 버티컬당 평균 60만건 결산 데이터 안정 처리 기반 확보</li>
           <li><strong>핵심 성과 2:</strong> 컨트롤러 112개 -> 8개 통합으로 유지보수성과 확장성 개선</li>
           <li><strong>핵심 성과 3:</strong> 신규 버티컬 온보딩 절차 단순화로 기능 확장 리드타임 단축</li>
         </ul>
@@ -132,16 +147,9 @@
     <section>
       <h2>추가 경험</h2>
       <article class="project">
-        <h3>디자인 정보 매개 서비스</h3>
-        <p class="period">2023.05 ~ 2024.10</p>
-        <ul>
-          <li>JPA/Hibernate 기반 REST API 개발 및 Spring Batch 대용량 데이터 처리</li>
-          <li>전자계약 연동 기능 구현으로 계약 프로세스의 온라인 전환 지원</li>
-          <li>카카오 알림톡 연동으로 예약/계약/결제 상태 안내 자동화</li>
-          <li>결제 및 정산 프로세스 연계 기능 개발로 거래 데이터 처리 안정성 강화</li>
-          <li>쿠폰 발급 동시성 이슈를 낙관적 락(Optimistic Lock)으로 해결</li>
-        </ul>
+        <h3>통합 게시판 공통 모듈 개발</h3>
         <p class="period">2024.08 ~ 2024.09</p>
+        <p class="stack">Kotlin, Spring Boot, JPA, MySQL, Redis</p>
         <ul>
           <li>Kotlin 기반 통합 게시판 모듈 설계 및 Nexus Repository 사내 라이브러리 배포</li>
           <li>다수 프로젝트에서 재사용 가능한 구조를 설계해 코드 표준화에 기여</li>
@@ -190,10 +198,6 @@
               <li><strong>발급기관</strong> 한국산업인력공단</li>
               <li><strong>취득일</strong> 2021.06.02</li>
               <li><strong>자격번호</strong> 21201101662T</li>
-              <li>
-                <strong>증빙</strong>
-                <a href="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/87a290bb-5f35-4349-af22-f899db684bca/정보처리기사_김중혁.pdf" target="_blank" rel="noreferrer">정보처리기사_김중혁.pdf</a>
-              </li>
             </ul>
           </article>
 
@@ -203,10 +207,15 @@
               <li><strong>발급기관</strong> 재단법인 한국데이터산업진흥원</li>
               <li><strong>취득일</strong> 2021.12.17</li>
               <li><strong>자격번호</strong> SQL2D-043003271</li>
-              <li>
-                <strong>증빙</strong>
-                <a href="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ca7f0af4-8b86-4fe9-a2f0-ee4f72ca7905/SQLD_김중혁.pdf" target="_blank" rel="noreferrer">SQLD_김중혁.pdf</a>
-              </li>
+            </ul>
+          </article>
+
+          <article class="card education-card">
+            <h3>컴퓨터활용능력 1급</h3>
+            <ul class="education-list">
+              <li><strong>발급기관</strong> 대한상공회의소</li>
+              <li><strong>취득일</strong> 2021.02.05</li>
+              <li><strong>자격번호</strong> 21-K9-004875</li>
             </ul>
           </article>
         </div>
@@ -222,10 +231,6 @@
               <li><strong>교육기관</strong> KOSTA(한국소프트웨어기술진흥협회)</li>
               <li><strong>교육소개</strong> 실제 프로젝트 환경의 Cloud 맥락을 반영해 Spring Cloud 실무 역량을 강화하는 과정 수료</li>
               <li><strong>주요 내용</strong> Java, Spring Framework, Database, Servlet, JSP, HTML, CSS, JavaScript</li>
-              <li>
-                <strong>증빙</strong>
-                <a href="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7995a956-b88b-4b2e-854c-b838881dfe3c/KOSTA_224기_수료_김중혁.pdf" target="_blank" rel="noreferrer">KOSTA 224기 수료_김중혁.pdf</a>
-              </li>
             </ul>
           </article>
 
@@ -236,10 +241,6 @@
               <li><strong>교육기관</strong> 비트교육센터</li>
               <li><strong>교육소개</strong> 방학기간 단기 집중 실습 과정 수료</li>
               <li><strong>주요 내용</strong> C, C++, Data Structure</li>
-              <li>
-                <strong>증빙</strong>
-                <a href="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/535893f6-249a-4422-aabc-702698b16a58/한세비트_단기과정_41차_김중혁.pdf" target="_blank" rel="noreferrer">비트단기과정 수료증</a>
-              </li>
             </ul>
           </article>
         </div>
