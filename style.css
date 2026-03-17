@@ -115,6 +115,26 @@ p {
   gap: 16px;
 }
 
+.skills-section .card-grid {
+  gap: 12px;
+}
+
+.skills-section .card {
+  padding: 14px;
+  border-radius: 12px;
+}
+
+.skills-section .card h3 {
+  margin-bottom: 4px;
+  font-size: 17px;
+}
+
+.skills-section .card p {
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 .education-grid {
   align-items: stretch;
   grid-auto-rows: 1fr;
@@ -195,6 +215,35 @@ p {
 
 .project + .project {
   margin-top: 16px;
+}
+
+.project-section-title {
+  margin: 14px 0 6px;
+}
+
+.project-section-title strong {
+  font-size: 13px;
+  letter-spacing: 0.01em;
+  color: #334155;
+  font-weight: 700;
+}
+
+.project ul.project-section-list {
+  margin: 0;
+  padding: 10px 12px 10px 26px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-left: 3px solid #cbd5e1;
+  border-radius: 8px;
+}
+
+.project ul.project-section-list li {
+  color: #334155;
+  line-height: 1.6;
+}
+
+.project ul.project-section-list li + li {
+  margin-top: 6px;
 }
 
 .achievement-list,
