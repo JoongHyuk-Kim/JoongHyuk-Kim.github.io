@@ -112,7 +112,7 @@
 
       <article class="project">
         <h3>카카오 비즈니스 세미나 예약 시스템 운영 및 4차/4.5차 개편</h3>
-        <p class="period">2024.12 ~ 2025.12 | 역할: 성능 개선 및 배치/연동 안정화</p>
+        <p class="period">2024.12 ~ 2025.12 | 역할: 세미나 플랫폼의 핵심 백엔드(신청/수강/자격증) 개발과 외부 연동 장애 대응 체계 고도화</p>
         <p class="stack">서비스 링크: <a href="https://bizseminar.kakao.com/" target="_blank" rel="noreferrer">bizseminar.kakao.com</a></p>
         <p class="stack">Java, Spring Boot, JPA, QueryDSL, Spring Batch, MySQL, Redis, Docker, Kubernetes</p>
         <p class="project-section-title"><strong>개요</strong></p>
@@ -121,14 +121,16 @@
         </ul>
         <p class="project-section-title"><strong>주요업무</strong></p>
         <ul class="project-section-list">
+          <li>교육 신청·수강 동선 간소화(일괄 신청, 사전 질문 등록, VOD 즉시 학습 흐름 설계)</li>
           <li>자격증 서버 연동 기능을 설계·구현해 수강 이력과 자격증 발급 흐름의 연계 안정성을 강화</li>
-          <li>카카오뱅크 소상공인 컨설팅 도메인을 단독 담당해 End-to-End로 개발·운영 안정화를 수행(<a href="https://www.kakaocorp.com/page/detail/11814" target="_blank" rel="noreferrer">카카오 공식 기사, 2025.11.18</a>)</li>
+          <li>카카오TV 종료 이슈에 맞춰 영상 송출/관리 체계를 KAMP 기반으로 마이그레이션</li>
+          <li>카카오뱅크 소상공인 컨설팅 도메인을 단독 담당해 End-to-End로 개발·운영 안정화 수행 (<a href="https://www.kakaocorp.com/page/detail/11814" target="_blank" rel="noreferrer">카카오 공식 기사, 2025.11.18</a>)</li>
         </ul>
         <p class="project-section-title"><strong>성과</strong></p>
         <ul class="project-section-list">
           <li>k6 기반 부하 테스트와 대량 조회 구간 인덱스 최적화로 메인 API 응답 시간 P95 500ms -> 50ms 개선</li>
-          <li>외부 API 장애 상황에서도 내부 데이터 정합성 100% 유지</li>
           <li>Kubernetes CronJob(<code>concurrencyPolicy: Forbid</code>) 적용으로 배치 중복 실행 0건 달성</li>
+          <li>카카오TV 종료 이슈 대응 과정에서 서비스 전환 리스크 최소화 및 운영 연속성 확보</li>
           <li>외부 연동 오류 대응 로직(재시도/예외 처리)을 정비해 카카오뱅크 소상공인 컨설팅 연계의 실패 케이스를 줄이고 운영 안정성 강화</li>
         </ul>
       </article>
@@ -143,14 +145,15 @@
         </ul>
         <p class="project-section-title"><strong>주요업무</strong></p>
         <ul class="project-section-list">
-          <li>Spring Batch 기반 대용량 데이터 처리 파이프라인을 설계·운영해 배치 처리 안정성과 운영 효율을 강화</li>
           <li>전자계약 및 카카오 알림톡 연동으로 예약/계약/결제 상태 안내 자동화 구현</li>
           <li>결제 및 정산 프로세스 연계 기능 개발로 거래 데이터 처리 안정성 강화</li>
           <li>쿠폰 발급 동시성 이슈를 낙관적 락(Optimistic Lock)으로 해결</li>
+          <li>MDC 기반 LoggingFilter를 적용해 요청 단위 추적이 가능한 로그 체계를 구축</li>
+          <li>Prometheus·Grafana·Loki·Slack 연동으로 Error 로그 및 시스템 임계치 도달 시 실시간 알림 체계를 구현</li>
         </ul>
         <p class="project-section-title"><strong>성과</strong></p>
         <ul class="project-section-list">
-          <li>-</li>
+          <li>장애 징후(Error/임계치) 실시간 탐지·전파 체계를 구축해 운영 대응 속도 향상</li>
         </ul>
       </article>
 
@@ -164,7 +167,7 @@
         </ul>
         <p class="project-section-title"><strong>주요업무</strong></p>
         <ul class="project-section-list">
-          <li>-</li>
+          <li>바이크, 퀵보드, 퀵/택배, 카카오 PG 버티컬 결산 도메인 담당</li>
         </ul>
         <p class="project-section-title"><strong>성과</strong></p>
         <ul class="project-section-list">
