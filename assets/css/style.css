@@ -29,6 +29,36 @@ a {
   padding: 64px 0 48px;
 }
 
+.hero-top {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.hero-copy {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.profile-frame {
+  width: 176px;
+  height: 176px;
+  border-radius: 50%;
+  padding: 6px;
+  background: linear-gradient(145deg, #f1f5f9, #ffffff);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  flex: 0 0 auto;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #e2e8f0;
+}
+
 .eyebrow {
   margin: 0 0 8px;
   font-size: 13px;
@@ -133,6 +163,31 @@ p {
   margin-bottom: 0;
   font-size: 14px;
   line-height: 1.5;
+}
+
+.education-section .card {
+  padding: 14px;
+  border-radius: 12px;
+}
+
+.education-section .education-card h3 {
+  font-size: 17px;
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+
+.education-section .period {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.education-section .education-list li {
+  font-size: 14px;
+  gap: 8px;
+}
+
+.education-section .education-list li + li {
+  margin-top: 8px;
 }
 
 .education-grid {
@@ -273,5 +328,17 @@ p {
 
   .hero {
     padding-top: 56px;
+  }
+
+  .hero-top {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .profile-frame {
+    width: 132px;
+    height: 132px;
+    padding: 4px;
   }
 }
